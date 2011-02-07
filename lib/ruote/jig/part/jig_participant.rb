@@ -108,7 +108,10 @@ module Ruote #:nodoc:
         @options[:path] ||= '/'
         @options[:content_type] ||= :json
 
-        @http = Rufus::Jig::Http.new @options[:host], @options[:port], @options[:options_for_jig] || {}
+        @options[:options_for_jig] ||= {}
+        @options[:options_for_jig][:timeout] = 60
+
+        @http = Rufus::Jig::Http.new @options[:host], @options[:port], @options[:options_for_jig]
       end
 
       #
