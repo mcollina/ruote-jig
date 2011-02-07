@@ -24,7 +24,6 @@
 
 require 'rufus/jig' # gem install rufus-jig
 
-require 'ruote/engine/context'         # gem install ruote
 require 'ruote/part/local_participant' # gem install ruote
 
 module Ruote #:nodoc:
@@ -82,7 +81,6 @@ module Ruote #:nodoc:
     # http://github.com/tosch/ruote-jig/issues
     #
     class JigParticipant
-      include Ruote::EngineContext
       include Ruote::LocalParticipant
 
       #
