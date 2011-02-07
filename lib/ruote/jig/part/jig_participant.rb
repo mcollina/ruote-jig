@@ -162,7 +162,7 @@ module Ruote #:nodoc:
 
       # For now, does nothing.
       # Could stop a running consume method some day?
-      def cancel
+      def cancel(*args)
       end
 
       protected
